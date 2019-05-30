@@ -5,5 +5,5 @@
 ```
 Open `localhost:3000`
 
-#Having trouble starting?
-Just try `node index`
+# Having trouble starting?
+Try `node index`
