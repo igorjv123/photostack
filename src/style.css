@@ -1,0 +1,33 @@
+#mainContainer{
+    margin: 20px 0 0 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height:100%;
+    z-index: 1;
+}
+.App{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.bold{
+    font-weight: bold;
+}
+
+.openedPhotoTitle{
+    font-size: 1.2em;
+}
+.pink{
+    color:#ff1875;
+}
+.smallText{
+    font-size: 0.9em;
+}
+/* 
+.purple{
+    color: #ff408c;
+  } */

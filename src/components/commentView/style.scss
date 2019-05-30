@@ -1,0 +1,23 @@
+.commentView{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 0 1px 1px 1px rgba(60,64,67,.1), 0 1px 2px 1px rgba(60,64,67,.15); 
+}
+.commentView p {
+    padding: 0px;
+    margin: 0;
+}
+.commentAuthor{
+    font-weight: bold;
+}
+.commentInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.commentDate{
+    font-size: 0.8em;
+    color:  #ff1875;
+}

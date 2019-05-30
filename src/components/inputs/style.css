@@ -1,0 +1,48 @@
+.textInput{
+    font-size: 1.2em;
+    margin: 15px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    display: block;
+    width: 300px;
+    background: none;
+    outline: none;
+    outline-offset: none;
+    border: none;
+    border-bottom: 2px solid #262f3d;
+
+}
+.btnSubmit{
+    padding: 10px;
+    background-color: #ff408c;
+    box-shadow: 1px 1px 2px 2px rgba(60,64,67,.4), 0 1px 3px 1px rgba(60,64,67,.15);
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 2px;
+    width: 200px;
+    margin: 20px 20px 20px 20px;
+    display: block;
+    margin: 0 auto;
+}
+.btnSubmit:hover{
+    cursor:pointer;
+    background-color: #ff1875;
+}
+.btnSubmitDark{
+    padding: 10px;
+    box-shadow: 1px 1px 2px 2px rgba(60,64,67,.4), 0 1px 3px 1px rgba(60,64,67,.15);
+    border: none;
+    font-size: 1.2em;
+    border-radius: 2px;
+    width: 200px;
+    margin: 20px 20px 20px 20px;
+    display: block;
+    margin: 0 auto;
+    background-color: #262f3d;
+    color: #fff;
+}
+.btnSubmitDark:hover{
+    background-color: #181e27;
+    cursor:pointer;
+}

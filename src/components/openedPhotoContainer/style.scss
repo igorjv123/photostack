@@ -1,0 +1,94 @@
+.openedPhotoWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.openedPhotoContainer{
+    height: 100%;
+    width: 70%;
+    margin: 0 0px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+.openedPhoto{
+    position: relative;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+    box-shadow: 0 1px 2px 2px rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+}
+.downloadLink>a{
+  text-decoration: none;
+  color: #ff1875;
+  padding: 3px 5px;
+  
+}
+.downloadLink{
+  padding: 3px;
+  margin: 3px;
+  
+}
+.downloadLink>a:hover{
+  background-color: rgba(204, 204, 204, 0.233);
+}
+.popUpSlider{
+  height: 85%;
+  width: 100%;
+  position: relative;
+}
+.prevPhoto{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+}
+.nextPhoto{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: none;
+}
+.popUpSlider:hover .nextPhoto, .prevPhoto{
+  display: block;
+}
+.openedPhotoInfo{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: center;
+}
+.openedPhotoTitle{
+  text-overflow: ellipsis;
+}
+.rightBar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rateSection{
+  display: flex;
+  align-items: center;
+}
+.rateSection>p{
+  margin: 0;
+  padding: 0;
+}
+.openedPhotoInfo>div>p{
+  margin: 0;
+}
+.comments{
+    min-width: 30%;
+    margin: 20px;
+    height: 95%;
+    overflow: hidden;
+}

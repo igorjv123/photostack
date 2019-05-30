@@ -1,0 +1,22 @@
+.contentContainer{
+    margin: 20px 20px 20px 20px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+    width: auto; 
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-around;
+    justify-content: baseline;
+}   
+.cardContainer{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    min-width: 350px;
+    
+}

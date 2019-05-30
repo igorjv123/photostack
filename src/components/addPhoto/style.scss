@@ -1,0 +1,56 @@
+.addPhotoWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    margin: 20px;    
+}
+.dragAndDropContainer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 20px;
+}
+.photoWrapper{
+    box-shadow: 0 1px 2px 2px rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15); 
+    height: 400px;
+    width: 450px;
+    position: relative;
+    overflow: hidden;
+    /* Width and height can be anything. */
+    // width: 50vw;
+    // height: 50vh;
+}
+.addPhotoBtnCancel{
+    width: 100px;
+    height: 50px;
+    font-size: 1em;
+}
+.addPhotoInfo{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.addPhotoTags{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.addPhotoButtons{
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+}
+.addPhotoButtons>button, label{
+    margin: 10px;
+}
+.addPhoto{
+    display: block;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+.whiteBtn{
+    background-color: aliceblue;
+    border: 3px solid #ff408c;
+    color: #ff408c;
+
+}

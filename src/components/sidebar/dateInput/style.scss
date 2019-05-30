@@ -1,0 +1,16 @@
+.datelabel{
+    padding: 0 10px;
+    display: block;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 1em;
+}
+.dateInput{
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 0 30px 10px 10px;    
+}
+.dateInput:focus{
+    outline-color: #ff408c
+}

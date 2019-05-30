@@ -1,0 +1,3 @@
+export const ADD_PHOTO = 'ADD_PHOTO'
+export const ADD_PHOTO_SUCCESS = 'ADD_PHOTO:SUCCES'
+export const ADD_PHOTO_FAILED = 'ADD_PHOTO:FAILED'
