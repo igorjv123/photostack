@@ -61,14 +61,14 @@ class DragAndDrop extends Component {
         return (
             <div style={{ display: 'inline-block', position: 'relative', ...this.props.style }} ref={this.dropRef}>
                 {this.state.dragging?
-                        <div className='dragAndDropText'>
-                                DROP IT <br/>
-                                <img style={{height:'2em'}} src={dropIcon}/>
-                        </div>
+                    <div className='dragAndDropText'>
+                            DROP IT <br/>
+                            <img style={{height:'2em'}} src={dropIcon}/>
+                    </div>
                 :
-                <div className='dragAndDropText'>
-                        DRAG PHOTO HERE
-                </div>
+                    <div className='dragAndDropText'>
+                            DRAG PHOTO HERE
+                    </div>
                 }
             {this.props.children}
             </div>

@@ -65,6 +65,10 @@ class Sidebar extends Component {
     if(this.props.filter.tags[0]){
       window.scroll(0, window.innerHeight-50)
     }
+    if(this.props.search.length>0){
+      window.scroll(0, window.innerHeight-50)
+
+    }
     const el = document.querySelector('#mainContainer');
     this.setState({top: el.offsetTop, height: el.offsetHeight});
     window.onscroll = () => {

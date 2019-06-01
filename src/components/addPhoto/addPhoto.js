@@ -36,7 +36,6 @@ class AddPhoto extends React.Component{
   onDone = (image) => {
     let state = this.state;
     state.photo.image = image
-    console.log(image)
     this.setState(state)
   }
   handleInputChange = (e) =>{
@@ -102,13 +101,13 @@ class AddPhoto extends React.Component{
         <div className='addPhotoButtons'>
             {this.state.photo.image?
               <BtnSubmitDark className='addPhotoBtnCancel whiteBtn'
-              onclick={this.handlCancelClick} 
+              onClick={this.handlCancelClick} 
               value='Change photo'/>
               :
               null  
             }          
             <BtnSubmit className='addPhotoBtnCancel'
-              onclick={this.handleSubmitClick} 
+              onClick={this.handleSubmitClick} 
               value='Submit'/>            
             <CheckboxInput onChange={this.handleCheckClick} id='private' label='Private'/>
           </div>

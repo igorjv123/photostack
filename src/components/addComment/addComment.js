@@ -13,7 +13,6 @@ class AddComment extends Component {
         }
     }
     addBtnSubmit=()=>{
-        console.log('submit')
         const {firstName, lastName, _id} = this.props.user
         const comment = {
             authorFullName: firstName+' '+lastName,
@@ -22,7 +21,6 @@ class AddComment extends Component {
             imageId: this.props.imageId,
             answerTo: null
         }
-        console.log(comment)
         this.props.addCommentSumbit(comment)
         this.setState({text:''})
 
@@ -31,16 +29,14 @@ class AddComment extends Component {
         this.setState({text:e.target.value})
     }
     render(){
-        console.log(this.props)
         let disabled=true;
         if(this.state.text){
-            console.log(this.state.text==true)
             disabled=false
         }
         return(
             <div className='addCommentWrapper'>
                 <textarea onChange={this.textChange} value={this.state.text}className='addCommentText' ></textarea>
-                <BtnSubmit onclick={this.addBtnSubmit} disabled={disabled} style={{width:'70px'}} value='Add'/>
+                <BtnSubmit onClick={this.addBtnSubmit} disabled={disabled} style={{width:'70px'}} value='Add'/>
             </div>
         )
     }

@@ -23,6 +23,8 @@ class DropDown extends React.Component{
     }
     handleItemClick = (e) => {
         this.props.handleItemSubmit(e.target.id)
+        window.scroll(0, window.innerHeight-50)
+
     }
     render(){
         return(
@@ -30,7 +32,7 @@ class DropDown extends React.Component{
                     <span className='navLinkItem dropDownTitle'>Categories</span>
                     <div className="dropdownContent">
                         {this.props.tags.map((item)=>
-                            <DropDownItem key={item} onClick={this.handleItemClick} content={item}/>
+                            <DropDownItem  onClick={this.handleItemClick} key={item} content={item}/>
                             )}
                     </div>
                 </div>

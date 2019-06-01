@@ -7,10 +7,11 @@ export default function filterReducer(state = defaultState.filter, action) {
         case CHANGE_FILTER:{
             return {...state, ...action.payload } 
         }
-        case SET_FILTERS :{
+        case SET_FILTERS :{   
+            console.log(action)         
             let newState = {...state}
             newState.tags = [`${action.payload}`]
-            return {...newState}
+            return { ...newState }
         }
         default: {
             return state;

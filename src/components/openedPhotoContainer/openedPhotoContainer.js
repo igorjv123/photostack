@@ -1,13 +1,8 @@
 import React, {Component} from 'react'
-// import { mapDispatchToProps } from './container';
-import CommentView from 'components/commentView/commentView'
 import './style.scss'
 import { mapStateToProps, mapDispatchToProps } from "./container";
-import PhotoHOC from 'components/photoHOC/photoHOC'
 import { connect } from 'react-redux'
-import LoadingImage from 'images/loading.gif'
 import './style.scss'
-import Card from 'components/card/card'
 import CommentsBar from 'components/commentsBar/commentsBar'
 import AddComment from 'components/addComment/addComment'
 import ReactStars from 'react-stars'
@@ -45,7 +40,6 @@ class OpenedPhotoContainer extends Component {
         this.props.handleMarkChange(mark)
     }
     render(){
-        console.log(this.state)
         const mark = this.props.mark.mark?this.props.mark.mark:0
         const amount = this.props.mark.amount?this.props.mark.amount:0
         const image = this.state.activeImage
