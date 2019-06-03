@@ -1,10 +1,9 @@
 import { setFilters } from 'logic/dropDown/actions'
 import { changeFilter } from 'logic/sidebar/actions';
 
-
 export function mapStateToProps(state, ownProps) {
     const {tags, radio} = state
-    return {tags:tags, radio:radio}
+    return {tags:tags}
 }
 
 export function mapDispatchToProps(dispatch, ownProps) {

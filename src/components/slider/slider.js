@@ -89,9 +89,9 @@ class MainSlider extends Component{
                     <p className='mainSliderHeader'>Welcome to <span className='purple'>Photo</span><span className='purple'></span>Stack!</p>
                     <p className='mainSliderText'>Your personal free photo album</p>
                     <div className='mainSliderButtonsWrapper'>
-                      <NavLink to='/signin' className=''> <BtnSubmit value='Sign In' /> </NavLink>
-                      <p style={{"padding":"10px"}}> or </p>
-                      <NavLink to='/signup' className=''> <BtnSubmit style={{'backgroundColor':'#fff', 'color': '#ff408c'}} value='Sign Up' /> </NavLink>
+                      <NavLink to='/addPhoto' className=''> <BtnSubmit value='Add photo' /> </NavLink>
+                      {/* <p style={{"padding":"10px"}}> or </p>
+                      <NavLink to='/signup' className=''> <BtnSubmit style={{'backgroundColor':'#fff', 'color': '#ff408c'}} value='Sign Up' /> </NavLink> */}
                     </div>
                 </div>
             </div>

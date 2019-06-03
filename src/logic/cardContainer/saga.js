@@ -3,8 +3,8 @@ import { GET_IMAGES, GET_IMAGES_SUCCESS, GET_IMAGES_FAILED} from "./actionTypes"
 
 function* getImages(action) {  
     try {
-      let {page, amount} = action.payload
-      let data = yield fetch(`http://localhost:3001/api/images/filters?page=${page}&amount=${amount}`,{
+      let {page, amount, location, userId} = action.payload
+      let data = yield fetch(`http://localhost:3001/api/images/filters?page=${page}&amount=${amount}${location==='/profile'?('&userId='+userId): null}`,{
         headers: { "Content-Type" : "application/json" },
         method:'post',
         body: JSON.stringify({

@@ -66,8 +66,7 @@ class OpenedPhotoContainer extends Component {
                         />
                         <p>{mark}/{amount}</p>
                     </div>
-
-                        <p className='smallText pink'>Added by{image.authorFullName}</p>
+                        <p className='smallText'>Added by <span className='pink'>{image.authorFullName}</span></p>
                         <p className='smallText'>Date: <span className='pink'><Moment format='DD/MM/YYYY'>{image.date}</Moment></span> Size: <span className='pink'>{image.image.size}</span></p>
                     </div>           
                     

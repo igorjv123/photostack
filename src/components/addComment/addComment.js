@@ -23,6 +23,7 @@ class AddComment extends Component {
         }
         this.props.addCommentSumbit(comment)
         this.setState({text:''})
+        
 
     }
     textChange = (e) => {

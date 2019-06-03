@@ -6,6 +6,8 @@ import Card from 'components/card/card'
 import PopUp from 'components/popUp/popUp'
 import LoadingImage from 'images/loading.gif'
 import Pagination from 'components/pagination/pagination';
+import AuthHOC from 'components/authHOC/authHOC'
+import { withRouter } from 'react-router-dom';
 
 class CardContainer extends Component{
   constructor(props) {
@@ -17,6 +19,7 @@ class CardContainer extends Component{
       page:1,
       loading:true,
       filters:[],
+      location: props.location.pathname
     };
   }
   handleClick = (e) => {
@@ -25,13 +28,14 @@ class CardContainer extends Component{
     this.setState({loading:false})
     if (nextProps.filters !== this.props.filters || nextProps.search !== this.props.search  ) {
       this.setState({loading:true},
-        ()=>this.props.getImagesSubmit({page:this.state.page,amount:10, filters: this.props.filters, search: this.props.search}))
+        ()=>this.props.getImagesSubmit({page:this.state.page, amount:10, filters: this.props.filters, search: this.props.search, location:this.state.location, userId: this.props.user._id}))
     }
   } 
   componentWillMount(){
+  
      let page = this.state.page
       this.setState({filters:this.props.filters}, ()=>{
-        this.props.getImagesSubmit({page:page,amount:10, filters: this.props.filters, search: this.props.search})}
+        this.props.getImagesSubmit({page:page, amount:10, filters: this.props.filters, search: this.props.search, location:this.state.location, userId: this.props.user._id})}
         )
   }
 
@@ -64,7 +68,7 @@ class CardContainer extends Component{
   handlePagClick = (index) =>{
     let amount = this.props.amount?this.props.amount:10
     this.setState({page:index, loading:true}, ()=>{
-      this.props.getImagesSubmit({page:index,amount:amount, filters:this.props.filters, search: this.props.search});
+      this.props.getImagesSubmit({page:index,amount:amount, filters:this.props.filters, search: this.props.search,location:this.state.location, userId: this.props.user._id});
     })
   }
   render(){
@@ -94,4 +98,4 @@ class CardContainer extends Component{
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CardContainer);
+)(AuthHOC(withRouter(props => <CardContainer {...props}/>)));

@@ -8,6 +8,7 @@ import CheckboxInput from 'components/checkbox/checkbox'
 import { mapStateToProps, mapDispatchToProps } from "./container";
 import { connect } from 'react-redux'
 import AuthHOC from 'components/authHOC/authHOC'
+import { withRouter } from 'react-router-dom'
 
 class AddPhoto extends React.Component{
   constructor(props){
@@ -67,9 +68,10 @@ class AddPhoto extends React.Component{
     let date = new Date()
     let state = this.state.photo;
     state.date = date
-    this.setState({state}, ()=>
+    this.setState({state}, ()=>{
       this.props.addNewPhoto(this.state.photo)
-    )
+      this.props.history.push('/')
+    })
  
   }
   render(){
@@ -120,7 +122,7 @@ class AddPhoto extends React.Component{
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(AuthHOC(AddPhoto));
+)(AuthHOC(withRouter(props => <AddPhoto {...props}/>)));
 
 
 
