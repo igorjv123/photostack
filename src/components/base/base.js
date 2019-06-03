@@ -29,12 +29,12 @@ import DragAndDropWrapper from 'components/dragAndDropWrapper/dragAndDropWrapper
           base64: reader.result,
           file: file,
         };
-
         allFiles.push(fileInfo);
 
-        if(allFiles.length == files.length){
+        if(allFiles.length === files.length){
           if(this.props.multiple) this.props.onDone(allFiles);
-          else this.props.onDone(allFiles[0]);
+          else this.props.onDone();
+
         }  
     }
   }

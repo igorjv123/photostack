@@ -32,3 +32,8 @@
     width: 100%;
     border: 2px solid #ddd;
 }
+@media screen and (max-width: 1024px){
+    .profileInfo{
+      display: none;
+    }
+  }

@@ -63,7 +63,7 @@ class DragAndDrop extends Component {
                 {this.state.dragging?
                     <div className='dragAndDropText'>
                             DROP IT <br/>
-                            <img style={{height:'2em'}} src={dropIcon}/>
+                            <img alt='' style={{height:'2em'}} src={dropIcon}/>
                     </div>
                 :
                     <div className='dragAndDropText'>

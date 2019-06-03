@@ -38,7 +38,7 @@ class Sidebar extends Component {
       tags.push(e.target.id)
       this.setState({filter:{
         tags:tags
-      }},()=>this.props.onFiltersSelect(this.state.filter))
+      }},()=>this.props.handleChangeFilter(this.state.filter))
     }
     else{
       let index = tags.indexOf(e.target.id)

@@ -1,7 +1,6 @@
 import React from 'react';
 import Content from 'components/content/content'
 import './style.css'
-import MainSlider from 'components/slider/slider'
 import SignUp from 'components/signUp/signUp'
 
 function SignUpPage() {

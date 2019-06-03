@@ -5,22 +5,6 @@ import { mapStateToProps, mapDispatchToProps } from "./container";
 import { connect } from 'react-redux'
 
 class DropDown extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            filters:[
-                'Sea',
-                'Automobiles',
-                'Mountains',
-                'Nature',
-                'Children', 
-                'People', 
-                'City', 
-                'Sport', 
-                'Rest'
-            ]
-        }
-    }
     handleItemClick = (e) => {
         this.props.handleItemSubmit(e.target.id)
         window.scroll(0, window.innerHeight-50)

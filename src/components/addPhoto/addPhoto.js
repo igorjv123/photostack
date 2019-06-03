@@ -36,6 +36,7 @@ class AddPhoto extends React.Component{
   onDone = (image) => {
     let state = this.state;
     state.photo.image = image
+    console.log(image)
     this.setState(state)
   }
   handleInputChange = (e) =>{
@@ -93,7 +94,7 @@ class AddPhoto extends React.Component{
               <TextInput type='text' id='description' placeholder='Description' onChange={this.handleInputChange} />
               <div className='addPhotoTags'>
               {this.props.tags.map((tag)=>
-             <CheckboxInput onChange={this.handleTagClick} key={tag}  onChange={this.handleTagClick} id={tag} label={tag}/>
+             <CheckboxInput key={tag}  onChange={this.handleTagClick} id={tag} label={tag}/>
               )}
               </div>
           </div>  

@@ -6,9 +6,15 @@
     margin: 0 auto;
     justify-content: center;
     min-height: 650px;
+   
 }
 .cardContainerLoading{
     position: absolute;
     top: 45%;
     bottom: 55%;
 }
+@media screen and (max-width: 1024px){
+    .cardContainer{
+      margin: 20px;
+    }
+  }

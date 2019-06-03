@@ -5,9 +5,7 @@ import {NavLink} from 'react-router-dom'
 
 const DropDowmItem = (props) => {
     return (
-        <div className='dropDownItem' onClick={props.onClick}>
-            <NavLink style={{display:'block'}} id={props.content} to='/' >{props.content}</NavLink>
-        </div>
+        <NavLink className='dropDownItem' onClick={props.onClick} style={{display:'block'}} id={props.content} to='/' >{props.content}</NavLink>
     )
 }
 export default DropDowmItem;

@@ -1,0 +1,63 @@
+#burgerMenu{
+    display: none;
+    overflow-x: none;
+    overflow: hidden;
+}
+.burgerIconWrapper{
+    width:30px;
+    cursor: pointer;
+    margin: 0 20px 0 0;
+
+}
+.burgerIcon{
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    margin: 7px 0;
+    border-radius: 3px;
+}
+.burgerIconActive{
+    height: 4px;
+    width: 100%;
+    background-color: #ff408c;
+    margin: 7px 0;
+    border-radius: 3px;
+}
+.burgerMenuContent{
+    overflow-x: hidden;
+    color: #000;
+    width: 300px;
+    background-color: #fff;
+    position: absolute;
+    left: -300px;
+    z-index: 1000;
+    transition: left 0.3s ease-in;
+    top:0px;
+    height: 100vh;
+    overflow-y: auto;
+    // overflow-x: none;
+    box-shadow: 1px 1px 2px 2px rgba(60,64,67,.4), 0 1px 3px 1px rgba(60,64,67,.15);
+
+}   
+.show{
+    left:0;
+}
+
+.burgerMenuItems{
+    padding: 10px;
+}
+.darkWrapperClose{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    left: 0;
+    top: 50px;
+    z-index: 0;
+
+}
+@media screen and (max-width: 1024px){
+    #burgerMenu{
+      display: block;
+    }
+  }

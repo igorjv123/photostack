@@ -12,11 +12,16 @@
     flex-wrap: wrap;
     align-items: space-around;
     justify-content: baseline;
+    margin: 20px 20px 20px 320px;
 }   
 .cardContainer{
     position: relative;
     width: 90%;
     margin: 0 auto;
     min-width: 350px;
-    
 }
+@media screen and (max-width: 1024px){
+    .contentContainer{
+      margin: 20px;
+    }
+  }

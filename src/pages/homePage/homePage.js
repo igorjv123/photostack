@@ -20,8 +20,8 @@ class SignInPage extends React.Component {
       <div>
           <MainSlider />
           <div id='mainContainer'>
-            <Sidebar onFiltersSelect={this.handleFilterChange}/>
-            <Content margin='20px 20px 20px 320px'>
+            <Sidebar/>
+            <Content>
               <CardContainer/>
             </Content>
           </div>
