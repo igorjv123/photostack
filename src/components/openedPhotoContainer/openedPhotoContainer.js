@@ -29,7 +29,6 @@ class OpenedPhotoContainer extends Component {
     componentWillReceiveProps(nextProps){
         if (nextProps.mark !== this.props.mark) {
           this.setState({mark: this.props.mark})
-           
         }
       } 
     handleStarsChange=(val)=>{

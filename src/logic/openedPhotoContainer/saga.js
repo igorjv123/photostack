@@ -18,6 +18,7 @@ function* setMark(action) {
           .then((response)=>{
           return response.json()
         })
+      console.log(newMark)
       yield put({
         type: GET_MARK_SUCCESS,
         payload: newMark
@@ -36,9 +37,8 @@ function* setMark(action) {
     try {
       let newMark = yield fetch(`http://localhost:3001/api/marks/image/${action.payload}`)
           .then((response)=>{
-          return response
+          return response.json()
         })
-       console.log(newMark)
       yield put({
         type: GET_MARK_SUCCESS,
         payload: newMark
@@ -53,7 +53,6 @@ function* setMark(action) {
     }
   }
   function* deletePhoto(action) {  
-    console.log(action)
     try {
       let res = yield fetch(`http://localhost:3001/api/images/${action.payload}`,{
         method:'delete'

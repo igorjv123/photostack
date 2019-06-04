@@ -8,7 +8,6 @@ export function getMarkReducer(state = defaultState.mark, action) {
                 ...action.payload
             };
         }
-    
         default: {
             return state;
         }
