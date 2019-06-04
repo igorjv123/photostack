@@ -92,3 +92,14 @@
     height: 95%;
     overflow: hidden;
 }
+.deleteButton{
+  display: inline-block;
+  padding: 6px;
+  background: none;
+  border:none;
+}
+.deleteButton:hover{
+  cursor: pointer;
+  background-color: rgba(204, 204, 204, 0.233);
+  color: #ff1875;
+}

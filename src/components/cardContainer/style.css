@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     width: auto;
+    min-width: 340px;
     margin: 0 auto;
     justify-content: center;
     min-height: 650px;

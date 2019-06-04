@@ -1,4 +1,4 @@
-import { setMark, getMark  } from 'logic/openedPhotoContainer/actions'
+import { setMark, getMark, deletePhoto  } from 'logic/openedPhotoContainer/actions'
 
 export function mapStateToProps(state, ownProps) {
     const { mark } = state;
@@ -12,6 +12,9 @@ export function mapDispatchToProps(dispatch, ownProps) {
         },
         getMarkInfo(data){
             dispatch(getMark(data))
+        },
+        deletePhotoSubmit(id){
+            dispatch(deletePhoto(id))
         }
     }
 };

@@ -36,6 +36,9 @@ const state = {
         'City', 
         'Sport', 
         'Rest'
-    ]
+    ],
+    deletePhoto:{
+        
+    }
 }
 export default state;

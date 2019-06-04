@@ -5,7 +5,7 @@ import cardContainerReducer from './cardContainer/reducer';
 import filterReducer from './sidebar/reducer'
 import commentsReducer from './commentsBar/reducer'
 import searchBarReducer from './searchBar/reducer'
-import getMarkReducer from './openedPhotoContainer/reducer';
+import {getMarkReducer,deletePhotoReducer} from './openedPhotoContainer/reducer';
 import defaultTagsReducer from './defaultTags'
 const reducer = combineReducers({
     login:loginReducer,
@@ -16,6 +16,7 @@ const reducer = combineReducers({
     searchQuery: searchBarReducer,
     mark: getMarkReducer,
     tags:defaultTagsReducer,
+    deletePhoto: deletePhotoReducer,
     // newComment: addCommentReducer,
     // images: addPhotoReducer
 })

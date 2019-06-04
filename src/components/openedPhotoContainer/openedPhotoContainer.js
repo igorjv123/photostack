@@ -8,6 +8,8 @@ import AddComment from 'components/addComment/addComment'
 import ReactStars from 'react-stars'
 import Moment from 'react-moment'
 import AuthHOC from 'components/authHOC/authHOC'
+import { withRouter } from 'react-router-dom'
+
 
 class OpenedPhotoContainer extends Component {
     constructor(props){
@@ -39,10 +41,16 @@ class OpenedPhotoContainer extends Component {
         }
         this.props.handleMarkChange(mark)
     }
+    handleDeletePhoto = (e) =>{
+        this.props.deletePhotoSubmit(this.state.activeImage._id)
+        this.props.closePopup(e)
+
+    }
     render(){
         const mark = this.props.mark.mark?this.props.mark.mark:0
         const amount = this.props.mark.amount?this.props.mark.amount:0
         const image = this.state.activeImage
+        const {_id} = this.props.user
         return(
             <div className='openedPhotoWrapper'>
                 <div className='openedPhotoContainer' >
@@ -53,7 +61,7 @@ class OpenedPhotoContainer extends Component {
                     <div>
                         <p className='bold openedPhotoTitle'>{image.title}</p>
                         <p>{image.description}</p>
-                        <p className='downloadLink'><a  href={image.image.base64} download>Download</a></p>
+                        <p className='downloadLink'><a  href={image.image.base64} download>Download</a> Size: <span className='pink'>{image.image.size}</span></p>
                     </div>    
                     <div className='rightBar'>
                     <div className='rateSection'>
@@ -67,7 +75,12 @@ class OpenedPhotoContainer extends Component {
                         <p>{mark}/{amount}</p>
                     </div>
                         <p className='smallText'>Added by <span className='pink'>{image.authorFullName}</span></p>
-                        <p className='smallText'>Date: <span className='pink'><Moment format='DD/MM/YYYY'>{image.date}</Moment></span> Size: <span className='pink'>{image.image.size}</span></p>
+                        <p className='smallText'>
+                            Date: <span className='pink'>
+                                <Moment format='DD/MM/YYYY'>{image.date}</Moment>
+                            </span>
+                            {_id === image.authorId?<button onClick={this.handleDeletePhoto} className="deleteButton">Delete</button>:null}
+                        </p>
                     </div>           
                     
                 </div>
@@ -83,4 +96,4 @@ class OpenedPhotoContainer extends Component {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-  )(AuthHOC(OpenedPhotoContainer));
+  )(AuthHOC(withRouter(props => <OpenedPhotoContainer {...props}/>)));

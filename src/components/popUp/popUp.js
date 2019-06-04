@@ -6,7 +6,7 @@ const PopUp = (props) => {
       return (
         <div className='popup' onClick={props.closePopup}>
           <div className='popup_inner'>
-            <OpenedPhotoContainer images={props.images} activeImage={props.image}/>
+            <OpenedPhotoContainer closePopup={props.closePopup} images={props.images} activeImage={props.image}/>
           </div>
         </div>
       );

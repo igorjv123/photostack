@@ -1,4 +1,4 @@
-import { SET_MARK, GET_MARK } from "./actionTypes";
+import { SET_MARK, GET_MARK, DELETE_PHOTO } from "./actionTypes";
 
 export function setMark(payload) {
     return {
@@ -11,4 +11,10 @@ export function getMark(payload) {
         type: GET_MARK,
         payload:payload
     };
+}
+export function deletePhoto(id){
+    return{
+        type: DELETE_PHOTO,
+        payload:id
+    }
 }

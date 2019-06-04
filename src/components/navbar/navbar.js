@@ -25,9 +25,7 @@ class Navbar extends React.Component {
               <Link to='/' className='logoText'> <span className='purple'>Photo</span>Stack</Link>
               
           </div>
-          <div>
-            
-          </div>
+         
           <nav>
               <SearchBar placeholder={'Search...'} button={'Search'}/>
               <DropDown/>

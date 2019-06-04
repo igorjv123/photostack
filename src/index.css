@@ -11,7 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #e8eaed;
   /* overflow-x: hidden; */
-  min-width: 1024px;
+  min-width: 480px;
 }
 
 
@@ -21,5 +21,5 @@ code {
 }
 #mainContainer{
   position: relative;
-  min-width: 1024px;
+  min-width: 480px;
 }

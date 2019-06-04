@@ -1,5 +1,8 @@
 import { call, put, all, takeLatest } from 'redux-saga/effects';
-import { SET_MARK, GET_MARK_SUCCESS, GET_MARK_FAILED, GET_MARK } from "./actionTypes";
+import { SET_MARK, 
+        GET_MARK_SUCCESS, GET_MARK_FAILED, GET_MARK, 
+        DELETE_PHOTO, DELETE_PHOTO_SUCCESS,  DELETE_PHOTO_FAILED  } 
+      from "./actionTypes";
 
 function* setMark(action) {  
     try {
@@ -33,7 +36,7 @@ function* setMark(action) {
     try {
       let newMark = yield fetch(`http://localhost:3001/api/marks/image/${action.payload}`)
           .then((response)=>{
-          return response.json()
+          return response
         })
        console.log(newMark)
       yield put({
@@ -49,11 +52,32 @@ function* setMark(action) {
       });
     }
   }
+  function* deletePhoto(action) {  
+    console.log(action)
+    try {
+      let res = yield fetch(`http://localhost:3001/api/images/${action.payload}`,{
+        method:'delete'
+      })
+      console.log(res)
+      yield put({
+        type: DELETE_PHOTO_SUCCESS,
+        payload: res
+      });
+      
+    } catch (err) {
+      console.log(err)
+      yield put({
+        
+        type: DELETE_PHOTO_FAILED
+      });
+    }
+  }
 
 export default function* setMarkSaga() {
     yield all([
       takeLatest(SET_MARK, setMark),
-      takeLatest(GET_MARK, getMark)
+      takeLatest(GET_MARK, getMark),
+      takeLatest(DELETE_PHOTO, deletePhoto)
 
     ])
   }

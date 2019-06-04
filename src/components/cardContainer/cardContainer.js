@@ -26,7 +26,11 @@ class CardContainer extends Component{
   }
   componentWillReceiveProps(nextProps){
     this.setState({loading:false})
-    if (nextProps.filters !== this.props.filters || nextProps.search !== this.props.search  ) {
+    if (
+        nextProps.filters !== this.props.filters 
+        || nextProps.search !== this.props.search 
+        || nextProps.deletePhoto !== this.props.deletePhoto 
+      ) {
       this.setState({loading:true},
         ()=>this.props.getImagesSubmit({page:this.state.page, amount:10, filters: this.props.filters, search: this.props.search, location:this.state.location, userId: this.props.user._id}))
     }
@@ -58,7 +62,7 @@ class CardContainer extends Component{
     });
   }
   closePopup = (e) => {
-    if(e.target.className === 'popup'){
+    if(e.target.className === 'popup' || e.target.className === 'deleteButton'){
       this.setState({
         showPopup: !this.state.showPopup
       });
