@@ -1,0 +1,21 @@
+.cardContainer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    min-width: 340px;
+    margin: 0 auto;
+    justify-content: center;
+    min-height: 650px;
+   
+}
+.cardContainerLoading{
+    position: absolute;
+    top: 45%;
+    bottom: 55%;
+}
+@media screen and (max-width: 1024px){
+    .cardContainer{
+      margin: 20px;
+    }
+  }
